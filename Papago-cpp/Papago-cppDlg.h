@@ -30,4 +30,12 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	CButton m_btnTranslation;
+	afx_msg void OnBnClickedButtonTranslation();
+	CComboBox m_cboFrom;
+	CComboBox m_cboTo;
+	CEdit m_txtFrom;
+	CEdit m_txtTo;
+	CStatic m_lbCurrLang;
 };

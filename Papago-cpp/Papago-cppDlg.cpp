@@ -25,11 +25,18 @@ CPapagocppDlg::CPapagocppDlg(CWnd* pParent /*=nullptr*/)
 void CPapagocppDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_BUTTON_TRANSLATION, m_btnTranslation);
+	DDX_Control(pDX, IDC_COMBO_FROM, m_cboFrom);
+	DDX_Control(pDX, IDC_COMBO_TO, m_cboTo);
+	DDX_Control(pDX, IDC_EDIT_FROM, m_txtFrom);
+	DDX_Control(pDX, IDC_EDIT_TO, m_txtTo);
+	DDX_Control(pDX, IDC_STATIC_CURR_LANG, m_lbCurrLang);
 }
 
 BEGIN_MESSAGE_MAP(CPapagocppDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON_TRANSLATION, &CPapagocppDlg::OnBnClickedButtonTranslation)
 END_MESSAGE_MAP()
 
 
@@ -85,3 +92,9 @@ HCURSOR CPapagocppDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CPapagocppDlg::OnBnClickedButtonTranslation()
+{
+	// TODO: Add your control notification handler code here
+}
